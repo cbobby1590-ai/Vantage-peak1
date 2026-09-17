@@ -3,76 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PeakVantage Bank | Pure Digital Banking Architecture</title>
-    <script src="https://tailwindcss.com"></script>
-    <script>
-        tailwind.config = { theme: { extend: { colors: { brand: { navy: '#0B192C', blue: '#1E3E62', orange: '#F15A24', light: '#F8FAFC' } } } } }
-    </script>
+    <title>Application Dashboard</title>
+    <style>
+        body { font-family: sans-serif; display: flex; margin: 0; background-color: #f4f6f9; }
+        .sidebar { width: 250px; background-color: #1e293b; color: white; min-height: 100vh; padding: 20px; }
+        .main-content { flex: 1; padding: 30px; }
+        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+    </style>
 </head>
-<body class="bg-brand-light text-slate-800 font-sans">
-    <nav class="bg-brand-navy text-white sticky top-0 z-50 shadow-md">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 bg-brand-orange rounded-lg flex items-center justify-center font-bold text-xl text-white shadow">PV</div>
-                <span class="text-xl font-bold tracking-tight">PeakVantage<span class="text-brand-orange">.</span></span>
-            </div>
-            <div class="hidden md:flex space-x-8 font-medium">
-                <a href="checking.html" class="hover:text-brand-orange transition-colors">Checking</a>
-                <a href="savings.html" class="hover:text-brand-orange transition-colors">Savings</a>
-                <a href="security.html" class="hover:text-brand-orange transition-colors">Security Infrastructure</a>
-            </div>
-            <a href="login.html" class="bg-brand-orange hover:bg-opacity-90 text-white font-semibold px-5 py-2.5 rounded-lg transition shadow">Access Portal</a>
-        </div>
-    </nav>
+<body>
 
-    <header class="bg-gradient-to-b from-brand-navy to-brand-blue text-white py-24 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div class="space-y-6">
-                <span class="bg-brand-blue text-brand-orange font-bold text-xs uppercase tracking-widest px-3 py-1.5 rounded-full border border-brand-orange/30">Next-Generation FinTech Framework</span>
-                <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight">Your wealth built, <br><span class="text-brand-orange">intelligently protected.</span></h1>
-                <p class="text-slate-300 text-lg max-w-xl">Experience premier ledger mechanics yielding up to <strong class="text-white">4.85% APY</strong>, absolute structural data encryption, and integrated user dashboard processing tracking.</p>
-                <div class="pt-4 flex flex-wrap gap-4">
-                    <a href="enroll.html" class="bg-brand-orange hover:bg-opacity-95 text-white font-bold px-8 py-3.5 rounded-xl shadow-lg transition active:scale-95 text-center">Open Secure Account</a>
-                    <a href="checking.html" class="border border-slate-400 hover:border-white text-white font-semibold px-6 py-3.5 rounded-xl transition text-center">Explore Product Tiers</a>
-                </div>
-            </div>
-            
-            <div class="bg-white text-slate-800 p-8 rounded-2xl shadow-2xl border border-slate-100">
-                <h3 class="text-xl font-bold mb-2">Estimate Your Yield Yield</h3>
-                <p class="text-slate-500 text-sm mb-6">Track corporate compound earnings structures via our 4.85% APY index ledger metrics.</p>
-                <div class="space-y-5">
-                    <div>
-                        <label class="block text-sm font-semibold text-slate-600 mb-2">Initial Funding Deposit (\$)</label>
-                        <input type="range" min="1000" max="100000" step="1000" value="25000" id="depositAmount" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-brand-orange">
-                        <div class="flex justify-between items-center mt-2 font-bold text-lg text-brand-navy">
-                            <span>\$1,000</span>
-                            <span id="depositDisplay" class="bg-slate-100 px-3 py-1 rounded border border-slate-200 text-brand-orange">\$25,000</span>
-                            <span>\$100,000</span>
-                        </div>
-                    </div>
-                    <hr class="border-slate-100">
-                    <div class="bg-brand-light p-4 rounded-xl border border-slate-200 flex justify-between items-center">
-                        <span class="text-sm font-medium text-slate-500">Estimated 1-Year Earnings Accrual:</span>
-                        <span id="yieldResult" class="text-2xl font-black text-brand-navy">\$1,212.50</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    <!-- Navigation Sidebar -->
+    <aside class="sidebar">
+        <h2>AppNav</h2>
+        <nav>
+            <p>Overview</p>
+            <p>Transactions</p>
+            <p>Settings</p>
+        </nav>
+    </aside>
 
-    <footer class="bg-brand-navy text-slate-400 py-8 border-t border-slate-800 text-center text-xs">
-        <p>© 2026 PeakVantage Systems Core Inc. Unified Consumer Protections Framework. Equal Housing Lender.</p>
-    </footer>
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <header>
+            <h1>Account Overview</h1>
+        </header>
+        <section class="card">
+            <h3>Available Balance</h3>
+            <p>$0.00</p>
+        </section>
+    </main>
 
-    <script>
-        const slider = document.getElementById('depositAmount');
-        const display = document.getElementById('depositDisplay');
-        const result = document.getElementById('yieldResult');
-        slider.addEventListener('input', () => {
-            const val = parseInt(slider.value);
-            display.textContent = `$${val.toLocaleString()}`;
-            result.textContent = `$${(val * 0.0485).toLocaleString(undefined, {minimumFractionDigits:2, maximumFractionDigits:2})}`;
-        });
-    </script>
 </body>
 </html>
