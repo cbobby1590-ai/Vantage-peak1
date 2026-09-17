@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Checking Tiers | PeakVantage</title>
+    <script src="https://tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { brand: { navy: '#0B192C', blue: '#1E3E62', orange: '#F15A24', light: '#F8FAFC' } } } } }
+    </script>
+</head>
+<body class="bg-brand-light text-slate-800 font-sans">
+    <!-- Inline Unified Header Component -->
+    <nav class="bg-brand-navy text-white px-6 h-20 flex items-center justify-between shadow-md">
+        <div class="flex items-center space-x-3">
+            <a href="index.html" class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-brand-orange rounded-lg flex items-center justify-center font-bold text-xl text-white">PV</div>
+                <span class="text-xl font-bold tracking-tight">PeakVantage<span class="text-brand-orange">.</span></span>
+            </a>
+        </div>
+        <div class="hidden md:flex space-x-8 font-medium">
+            <a href="checking.html" class="text-brand-orange">Checking</a>
+            <a href="savings.html" class="hover:text-brand-orange transition-colors">Savings</a>
+            <a href="security.html" class="hover:text-brand-orange transition-colors">Security Infrastructure</a>
+        </div>
+        <a href="login.html" class="bg-brand-orange hover:bg-opacity-90 text-white font-semibold px-5 py-2.5 rounded-lg transition shadow">Access Portal</a>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-6 py-16 space-y-16">
+        <div class="text-center max-w-2xl mx-auto">
+            <h1 class="text-4xl font-extrabold text-brand-navy tracking-tight">Checking Accounts Designed To Move</h1>
+            <p class="text-slate-500 mt-4 text-lg">Fluid liquidity limits, zero operational monthly processing layout boundaries, and global network coverage modules.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div class="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm flex flex-col justify-between">
+                <div>
+                    <span class="text-xs font-bold text-brand-orange uppercase tracking-wider block mb-2">Base Tier Layout</span>
+                    <h3 class="text-2xl font-bold text-brand-navy mb-4">Vantage Basic Checking</h3>
+                    <p class="text-slate-500 text-sm mb-6">Perfect for swift digital clearing actions. Zero hidden upkeep penalties.</p>
+                    <ul class="space-y-3 text-sm font-medium text-slate-600">
+                        <li class="flex items-center space-x-2"><span class="text-emerald-500">✓</span> <span>No minimum balancing framework requirements</span></li>
+                        <li class="flex items-center space-x-2"><span class="text-emerald-500">✓</span> <span>Complementary Contactless Smart Debit Card</span></li>
+                        <li class="flex items-center space-x-2"><span class="text-emerald-500">✓</span> <span>Immediate Direct Deposit processing tracking</span></li>
+                    </ul>
+                </div>
+                <a href="enroll.html" class="mt-8 block text-center w-full bg-brand-navy hover:bg-brand-blue text-white font-bold py-3 rounded-xl transition shadow">Enroll Natively</a>
+            </div>
+
+            <div class="bg-white border-2 border-brand-orange rounded-2xl p-8 shadow-md flex flex-col justify-between relative">
+                <span class="absolute -top-3 right-6 bg-brand-orange text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Most Requested</span>
+                <div>
+                    <span class="text-xs font-bold text-brand-orange uppercase tracking-wider block mb-2">Premium Matrix Tier</span>
+                    <h3 class="text-2xl font-bold text-brand-navy mb-4">Peak Dynamic Premium</h3>
+                    <p class="text-slate-500 text-sm mb-6">Elevated mechanics for serious institutional operations capital controls.</p>
+                    <ul class="space-y-3 text-sm font-medium text-slate-600">
+                        <li class="flex items-center space-x-2"><span class="text-emerald-500">✓</span> <span>All Vanguard Basic specifications variables included</span></li>
+                        <li class="flex items-center space-x-2"><span class="text-emerald-500">✓</span> <span>Worldwide Outbound ATM maintenance cost rebates</span></li>
+                        <li class="flex items-center space-x-2"><span class="text-emerald-500">✓</span> <span>Accrues 1.25% yield APY on checking overflow thresholds</span></li>
+                    </ul>
+                </div>
+                <a href="enroll.html" class="mt-8 block text-center w-full bg-brand-orange hover:bg-opacity-95 text-white font-bold py-3 rounded-xl transition shadow">Open Account Pipeline</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-brand-navy text-slate-400 py-6 text-center text-xs mt-12">© 2026 PeakVantage Systems Core Inc.</footer>
+</body>
+</html>
